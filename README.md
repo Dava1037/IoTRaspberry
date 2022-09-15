@@ -9,4 +9,7 @@
 ## Roope
 ## Leo
 ## David
-### We started the installation of the raspberry but we are stuck right now on the Testing of the server
+### 13.9 'We started the installation of the raspberry but we are stuck right now on the Testing of the server'
+## 15.9 'Now the server is working'
+## How to connect a Motion Sensor to raspberry?
+### There is a proper way to connect a motion sensor to the raspberry, you have to carefully check.
