@@ -16,6 +16,7 @@
 
 There is a proper way to connect a motion sensor to the raspberry, you have to carefully check. We are learning how to do a database on MySQL:
 
+![image](https://user-images.githubusercontent.com/113332647/190371368-235e2e4e-9b66-4845-a38b-0fc964848e4c.png)
 
 
 
