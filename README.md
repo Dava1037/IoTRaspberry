@@ -11,6 +11,10 @@
 ## How to connect a Motion Sensor to raspberry?
 ### There is a proper way to connect a motion sensor to the raspberry, you have to carefully check. We are learning how to do a database on MySQL:
 sudo mariadb
-CREATE DATABASE LAHTI;
-USE LAHTI
-CREATE TABLE Liike (id int AUTO_INCREMENT NOT NULL PRIMARY KEY, arvo boolean, aika datetime);
+CREATE DATABASE DAVID_Liike;
+USE DAVID_LIIKE
+CREATE TABLE DAVID_Liike (id int AUTO_INCREMENT NOT NULL PRIMARY KEY, arvo boolean, aika datetime);
+INSTERT INTO DAVID_Liike (arvo, aika) VALUES (true, now());
+SELECT*FROM DAVID_Liike
+INSERT INTO DAVID_Liike (arvo, aika) VALUES (false, now());
+SELECT*FROM DAVID_Liike
