@@ -9,4 +9,8 @@
 ### 13.9 'We started the installation of the raspberry but we are stuck right now on the Testing of the server'
 ## 15.9 'Now the server is working'
 ## How to connect a Motion Sensor to raspberry?
-### There is a proper way to connect a motion sensor to the raspberry, you have to carefully check. We are learnign how to do a database on MySQL
+### There is a proper way to connect a motion sensor to the raspberry, you have to carefully check. We are learning how to do a database on MySQL:
+sudo mariadb
+CREATE DATABASE LAHTI;
+USE LAHTI
+CREATE TABLE Liike (id int AUTO_INCREMENT NOT NULL PRIMARY KEY, arvo boolean, aika datetime);
