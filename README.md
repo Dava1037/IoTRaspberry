@@ -15,8 +15,8 @@
 ### How to connect a Motion Sensor to raspberry?
 
 There is a proper way to connect a motion sensor to the raspberry, you have to carefully check. We are learning how to do a database on MySQL:
+![image](https://user-images.githubusercontent.com/113332647/190372655-f6af9dcf-3fec-49df-be42-9ba9d3713de8.png)
 
-<img width="700" alt=[image](https://user-images.githubusercontent.com/113332647/190371368-235e2e4e-9b66-4845-a38b-0fc964848e4c.png)
 
 
 
