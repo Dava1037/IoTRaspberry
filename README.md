@@ -37,3 +37,19 @@ This shows the table: SELECT*FROM DAVID_Liike
 Everytime that you want to insert some data you have to use this: INSERT INTO DAVID_Liike (arvo, aika) VALUES (false, now());
 
 And then show it: SELECT*FROM DAVID_Liike
+
+### 16.9
+We connected the arduino uno to the raspberry and try to make them work together.
+With this code line you can make them connect after installing the arduino in the Raspberry: 
+
+#!/usr/bin/env python3
+import serial
+
+if __name__ == '__main__':
+  ser = serial.Serrial('/dev/ttyACM0', 9600, timeout=1)
+  ser.reset_input_buffer()
+  
+  while True:
+    if ser.in_waiting > 0:
+      line = ser.readline().decode('utf-8).rstrip()
+      print(line)
