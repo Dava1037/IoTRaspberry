@@ -40,7 +40,7 @@ And then show it: SELECT*FROM DAVID_Liike
 
 ### 16.9
 We connected the arduino uno to the raspberry and try to make them work together.
-With this code line you can make them connect after installing the arduino in the Raspberry: 
+With this code line you can make them connect after installing the arduino in the Raspberry. This is in python: 
 
 #!/usr/bin/env python3
 import serial
@@ -53,3 +53,16 @@ if __name__ == '__main__':
     if ser.in_waiting > 0:
       line = ser.readline().decode('utf-8).rstrip()
       print(line)
+### Also
+On the ardiuno platform we had to open a new sketch and create the order to run the arduino serial:
+
+void setup() {
+
+Serial.begin(9600);
+}
+
+//with this you can make it repeat the serial as a loop and we noticed that changing the value in the delay makes it faster or slower when you check the  Sarjamonitori in the Ardiuno program 
+void loop() {
+Serial.println("Arduino");
+delay(100);
+}
