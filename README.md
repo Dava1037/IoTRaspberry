@@ -73,9 +73,26 @@ delay(100);
 (Python)
 import time
 
-whilr True:
+while True:
   try:
       time.sleep(3)
       print("Testi")
   except:
       print("Ei toimi")
+
+### Edit the database maden in MySQL from python code
+
+import time
+import mariadb
+
+try:
+    while True:
+        time.sleep
+        cur.execute("INSERT INTO ESIMERKKI(arvo) values (3)")
+        conn.comit()
+        print("Koodi toimi")
+        
+except:
+    print("ei toimi")
+    
+conn.close()
