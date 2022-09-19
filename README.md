@@ -80,7 +80,7 @@ while True:
   except:
       print("Ei toimi")
 
-### Edit the database maden in MySQL from python code
+### Edit the database made in MySQL from python code
 
 import time
 import mariadb
