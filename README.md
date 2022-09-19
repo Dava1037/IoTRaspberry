@@ -96,3 +96,7 @@ except:
     print("ei toimi")
     
 conn.close()
+
+
+cur.execute(f"INSERT INTO liike_tbl(arvo,aika) VALUES (?, ?)", (result, datetime.datetime.now()))
+        conn.commit()
