@@ -70,3 +70,12 @@ delay(100);
 ## 19.9
 
 ![19 9](https://user-images.githubusercontent.com/113332647/190959801-6cb33bf7-d398-4918-b0a8-f9078bc98aa8.jpg)
+(Python)
+import time
+
+whilr True:
+  try:
+      time.sleep(3)
+      print("Testi")
+  except:
+      print("Ei toimi")
