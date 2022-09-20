@@ -203,3 +203,15 @@ Selvittäkää miten tarkistetaan
 -Raspberryn lämpötila
 -kuinka paljon vapaata tilaa on jäljellä
 -miten vaihdetaan polusta toiseen
+
+
+## Practice on Terminal
+
+cd /home/       //opens the home database
+cd /home/rld-admin/Desktop      //
+touch Test        //Creates the file in the desktop
+cp Test Test2       //
+rm Test2        //Removes the file
+mv Test Test2       //Moves the file to specific place
+ls        //
+ls -larth       //shows information of the file like storage and last day/time that was edited
