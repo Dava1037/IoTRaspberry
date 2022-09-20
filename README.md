@@ -100,3 +100,18 @@ conn.close()
 
 cur.execute(f"INSERT INTO liike_tbl(arvo,aika) VALUES (?, ?)", (result, datetime.datetime.now()))
         conn.commit()
+
+## 20.9
+
+### Selvittäkää mitä tarkoitavat:
+EEPROM: EEPROM tai E²PROM (engl. Electronically Erasable Programmable Read-Only Memory) on haihtumatonta puolijohdemuistia, joka voidaan uudelleenkirjoittaa n. 10 000–100 000 kertaa. EEPROM-muistia käytetään pääasiassa asetustietojen tallentamiseen mikroprosessorin tai mikrokontrollerin sisältävissä laitteissa.
+
+UART: Se on lyhenne sanoista: Universal asynchronus reciever and transmission, tarkoittaa sarjaliikenne protokollaa, joka tapahtuu kahdella linjalla tai digitaalisella nastalla, jotka ovat RX (nasta0) ja TX nasta1).
+
+Arduino sisältää USB-sarjamuuntimen, joka avulla mikro-ohjain alijärjestelmä voi olla suoran yhteydessä tietokoneeseen (esim raspberry PI:hin)
+
+-I2C: Sarjaliikenne protokolla, jota käytetään yleisesti anturipohjaisissa projekteissa. I2C mahdollistaa selkeän tiedonsiirtoreitin ydinpiirin ja ohjainpiirin välillä.
+
+-SPI: Serial peripheral interface. Tätä yleisesti käytetään, kun halutaan kahden mikro-ohjaimen keskustelevan keskenään
+
+Mitä eroa I2C ja SIP:llä: 
