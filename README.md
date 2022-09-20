@@ -115,3 +115,87 @@ Arduino sisältää USB-sarjamuuntimen, joka avulla mikro-ohjain alijärjestelm�
 -SPI: Serial peripheral interface. Tätä yleisesti käytetään, kun halutaan kahden mikro-ohjaimen keskustelevan keskenään
 
 Mitä eroa I2C ja SIP:llä: 
+
+apt-get update
+
+clear
+
+date
+
+find/ -name esimerkki.txt
+
+nano example.txt
+
+poweroff
+
+raspi-config
+
+reboot
+
+shutdown -h 01:22:
+
+startx
+
+
+cat esimerkki.txt
+
+cd/abc/xyz
+
+|s -|
+
+mkdir esimerkki:_polku
+
+mv XXX
+rm esimekki
+
+scp use"´@10.0.0.32:/sine/path/tiedosto.txt
+
+touch example.txt
+
+
+ifconfig
+
+iwconfig
+
+iwlist wlan0 grep ESSID
+
+nmap
+
+ping
+
+wget http://www.website.com/example.txt
+
+
+
+cat/proc/meminfo
+
+cat/proc/partions
+
+cat/proc/version
+
+df -h
+
+df /
+
+dpkg--get-selections| grep XXX
+
+dpkg--get-selections
+
+free
+
+hostname -I
+
+Isusb
+
+UP key
+
+vcgenmd measure_temp
+
+vcgencmd get_mem am && vcgencmd get_mem gpu
+
+
+
+Selvittäkää miten tarkistetaan
+-Raspberryn lämpötila
+-kuinka paljon vapaata tilaa on jäljellä
+-miten vaihdetaan polusta toiseen
