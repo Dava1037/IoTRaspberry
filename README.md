@@ -200,7 +200,9 @@ vcgencmd get_mem am && vcgencmd get_mem gpu: Shows the memory split between the 
 
 
 Selvittäkää miten tarkistetaan
--Raspberryn lämpötila
+-Raspberryn lämpötila: cat /sys/class/thermal/thermal_zone0/temp
+vcgencmd measure_temp       //GPU temperature
+
 -kuinka paljon vapaata tilaa on jäljellä
 -miten vaihdetaan polusta toiseen
 
