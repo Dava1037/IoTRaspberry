@@ -116,82 +116,86 @@ Arduino sisältää USB-sarjamuuntimen, joka avulla mikro-ohjain alijärjestelm�
 
 Mitä eroa I2C ja SIP:llä: 
 
-apt-get update
-
-clear
-
-date
-
-find/ -name esimerkki.txt
-
-nano example.txt
-
-poweroff
-
-raspi-config
-
-reboot
-
-shutdown -h 01:22:
-
-startx
 
 
-cat esimerkki.txt
+## Common comands
 
-cd/abc/xyz
+apt-get update: Synchronizes the list of packages on your system to the list in the repositories. Use it before installing new packages to make sure you are installing the latest version.
+
+clear: Clears previously run commands and text from the terminal screen.
+
+date: Prints the current date.
+
+find/ -name esimerkki.txt: Searches the whole system for the file example.txt and outputs a list of all directories that contain the file.
+
+nano example.txt: Opens the file example.txt in the Linux text editor Nano.
+
+poweroff: To shutdown immediately.
+
+raspi-config: Opens the configuration settings menu.
+
+reboot: To reboot immediately.
+
+shutdown -h 01:22: To shutdown at 1:22 AM.
+
+startx: Opens the GUI (Graphical User Interface)
+
+
+cat esimerkki.txt: Displays the contents of the file example.txt.
+
+cd/abc/xyz: Changes the current directory to the /abc/xyz directory
 
 |s -|
 
-mkdir esimerkki:_polku
+mkdir esimerkki:_polku: Creates a new directory named example_directory inside the current directory
 
-mv XXX
-rm esimekki
+mv XXX: Moves the file or directory named XXX to a specified location. For example, mv
 
-scp use"´@10.0.0.32:/sine/path/tiedosto.txt
+rm esimekki: Deletes the file example.txt
 
-touch example.txt
+scp user @10.0.0.32:/sine/path/tiedosto.txt: Copies a file over SSH. Can be used to download a file from a PC to the Raspberry Pi. user@10.0.0.32 is the username and local IP address of the PC, and /some/path/file.txt is the path and file name of the file on the PC.
 
-
-ifconfig
-
-iwconfig
-
-iwlist wlan0 grep ESSID
-
-nmap
-
-ping
-
-wget http://www.website.com/example.txt
+touch example.txt: Creates a new, empty file named example.txt in the current directory.
 
 
+ifconfig: To check the status of the wireless connection you are using (to see if wlan0 has acquired an IP address).
 
-cat/proc/meminfo
+iwconfig: To check which network the wireless adapter is using.
 
-cat/proc/partions
+iwlist wlan0 grep ESSID: Use grep along with the name of a field to list only the fields you need (for example to just list the ESSIDs).
 
-cat/proc/version
+nmap: Scans your network and lists connected devices, port number, protocol, state (open or closed) operating system, MAC addresses, and other information.
 
-df -h
+ping: Tests connectivity between two devices connected on a network. For example, ping 10.0.0.32 will send a packet to the device at IP 10.0.0.32 and wait for a response. It also works with website addresses
 
-df /
+wget http://www.website.com/example.txt: Downloads the file example.txt from the web and saves it to the current directory.
 
-dpkg--get-selections| grep XXX
 
-dpkg--get-selections
+cat /proc /meminfo: Shows details about your memory.
 
-free
+cat /proc /partions: Shows the size and number of partitions on your SD card or hard drive.
 
-hostname -I
+cat/proc/version: Shows you which version of the Raspberry Pi you are using
 
-Isusb
+df -h: Shows information about the available disk space.
 
-UP key
+df /: Shows how much free disk space is available
 
-vcgenmd measure_temp
+dpkg--get-selections| grep XXX: Shows all of the installed packages that are related to XXX
 
-vcgencmd get_mem am && vcgencmd get_mem gpu
+dpkg--get-selections: Shows all of your installed packages
+
+free: Shows how much free memory is available.
+
+hostname -I: Shows the IP address of your Raspberry Pi.
+
+lsusb: Lists USB hardware connected to your Raspberry Pi.
+
+UP key: Pressing the UP key will print the last command entered into the command prompt. This is a quick way to repeat previous commands or make corrections to commands.
+
+vcgenmd measure_temp:  Shows the temperature of the CPU
+
+vcgencmd get_mem am && vcgencmd get_mem gpu: Shows the memory split between the CPU and GPU.
 
 
 
