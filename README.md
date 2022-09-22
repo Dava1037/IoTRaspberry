@@ -293,12 +293,45 @@ entry.pack()
 
 ## 22.9 Testit
 
-1. a) Tietokanta on DAVID_LIIKE, LAHTI, LEO_LIIKE, LIIKE, infomration_schema, mysql, performance_schema)
+## 1. a) Tietokanta on DAVID_LIIKE, LAHTI, LEO_LIIKE, LIIKE, infomration_schema, mysql, performance_schema)
    
    sudo maridb-> show database;
    
    b) you have to comment
    sudo mariadb-> show tables -> select from* [table name] ->describe [table name]
-2. -----              
-//we added arvo = GPIO.input(4)
+
+## 2.
+
+import time
+import datetime
+import maridb
+import RPi.GPIO as GPIO
+
+InputPin = 4      
+
+GPIO.setmode(GPIO.BCM)
+GPIO.SETUP(4, GPIO.IN)
+
+
+conn = mariadb.connect(user="root", password="kissa123", host="localhost", database="LIIKE")
+cur = conn.cursor()
+
+
+Annettiin muututuja while True loopin sisälle arvo = GPIO.input(4) Lisättiin sqlStringiin etteen f ja muutettiin "5" kovakoodattu arvon tilalle {arvo}        
+try:
+  while True:
+      arvo = GPIO.input(InputPin)
+
+      sqlStr = (f"INSERT INTO liike_tbl(arvo, aika) VALUES ({arvo}, now()")
+
+      time.sleep(5)
+      cur.execute(sqlStr)
+      conn.commit()
+  except:
+    print("ei toimi :(")
+    print(arvo)
+    
+  conn.close()
   
+  
+  ## 3. DHT11
