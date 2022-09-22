@@ -293,7 +293,7 @@ entry.pack()
 
 ## 22.9 Testit
 
-1. 
+1. a) Tietokanta on DAVID_LIIKE, LAHTI, LEO_LIIKE, LIIKE, infomration_schema, mysql, performance_schema)
 
 
 
