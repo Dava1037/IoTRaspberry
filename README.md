@@ -46,7 +46,7 @@ With this code line you can make them connect after installing the arduino in th
 import serial
 
 if __name__ == '__main__':
-  ser = serial.Serrial('/dev/ttyACM0', 9600, timeout=1)
+  ser = serial.Serrial('/dev/ttyACM0', 9600, timeout=1) 
   ser.reset_input_buffer()
   
   while True:
@@ -217,3 +217,84 @@ rm Test2        //Removes the file
 mv Test Test2       //Moves the file to specific place
 ls        //
 ls -larth       //shows information of the file like storage and last day/time that was edited
+
+## 21.9
+
+import tkinter
+root = tk.Tk()
+
+label = tk.Label(text="Heippa maailma")
+label.pack()
+
+entry = tk.Entry()
+entry.pack()
+
+                      //radiobuttons
+
+radioBtn = tk.Radiobutton(text="A", value= "A")
+radioBtn.pack()                                       //You have to right each time 'radioBtn.pack()' if you want to make the button.
+
+radioBtn = tk.Radiobutton(text="B", value= "B")
+radioBtn.pack()                                       //
+
+radioBtn = tk.Radiobutton(text="C", value= "C")
+radioBtn.pack()                                       //
+
+
+root.mainloop()
+
+### to create a button: 
+
+btn = tk.Button()
+        text="Nappi",                                     //to instert the text of the button
+        width=10,
+        height=5,
+        gb="blue",
+        fg="black",
+//you can change the color of the background with 'bg=red' or the text color with 'fg=white', for example.
+
+
+///To give an instruction to the button for example you define the instructions at the beginning with the root.configure soo when you press the button is change the color for example.
+        root.configure(
+        bg="black"
+        )                             //now it changes to black everytime that you use the button
+        
+ def radBtn1():
+     root.configure(bg="black")
+## Miten label toimi
+
+message =tk.Label(
+    text="Heippa porukka!",
+    foreground="white",
+    bakcground="black",
+    width=25,
+    height=25
+    )
+message.pack()
+#btn
+btn = tk.Button(
+    text="Nappi"
+    width=25,
+    height=5,
+    bg="blue",
+    fg="yellow"
+    )
+### Window  
+import tkinter as tk
+window = tk.Tk()
+lb = tk.Label(text="Name")
+entry = tk.Entry()
+
+name = entry.get()
+name
+
+lb.pack()
+entry.pack()
+
+## 22.9 Testit
+
+1. 
+
+
+
+
