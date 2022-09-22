@@ -295,13 +295,7 @@ entry.pack()
 
 1. a) Tietokanta on DAVID_LIIKE, LAHTI, LEO_LIIKE, LIIKE, infomration_schema, mysql, performance_schema)
    
-   sudo maridb-> 
-   then show database;
+   sudo maridb-> show database;
    
    b) you have to comment
-   sudo mariadb-> show tables -> select from* {table name} ->describe {table name}
-   
-                          
-
-
-
+   sudo mariadb-> show tables -> select from* [table name] ->describe [table name]
