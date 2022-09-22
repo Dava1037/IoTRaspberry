@@ -299,3 +299,6 @@ entry.pack()
    
    b) you have to comment
    sudo mariadb-> show tables -> select from* [table name] ->describe [table name]
+2. -----              
+//we added arvo = GPIO.input(4)
+  
