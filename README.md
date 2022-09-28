@@ -335,3 +335,8 @@ try:
   
   
   ## 3. DHT11
+  
+  ## 26.9
+  We had an basic introduce to HTML, talking about the anatomy of elements for example.
+  
+  ## 3. DHT11
