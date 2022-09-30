@@ -343,3 +343,6 @@ try:
 
 ## 29.9 
 Today we started php first creating the website with html but the file is in .php.
+
+## 30.9
+Time to learn how to make forms on HTML.
