@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practicando html con css</title>
+    <link rel="stylesheet" href="hello.css">
+</head>
+<body>
+    
+   
+
+    <div id="container">
+
+        <header>
+            <h1>CSS with David</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        Page 1
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="index.html">
+                        Page 2
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="index.html">
+                        Blog
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="index.html">
+                        Contact
+                    </a>
+                </li>
+                
+            </ul>
+                
+        </nav>
+
+        <section id="content">
+
+            <article class="article">
+                <h2>Article title</h2>
+                <p>Text of article</p>
+            </article>
+
+            <article class="article">
+                <h2>Article title</h2>
+                <p>Text of article</p>
+            </article>
+
+            <article class="article">
+                <h2>Article title</h2>
+                <p>Text of article</p>
+            </article>
+
+            <article class="article">
+                <h2>Article title</h2>
+                <p>Text of article</p>
+            </article>
+
+        </section>
+
+        <aside>
+            <h2>Side section</h2>
+            <form>
+                <input type="text">
+                <input type="submit" value="Search"/>
+            </form>
+
+            <div style="border: 1px dashed black; width:auto; text-align: center
+             ">
+    
+                <form action="process.php" style="background-color: yellow " >
+                
+                    
+                    <div>
+                        <label for="fname">Nimi:</label>
+                        <input type="text" id="fname" name="fname" placeholder="Etunimi" required>
+                    
+                    </div>
+                    
+                    <br>
+                    
+                    <div>
+                      <label for="bdatee">Päivämäärä</label>
+                      <input type="date">
+                    </div>
+        
+                    <br>
+        
+                    <div>
+                        <label for="pass">Salasana</label>
+                        <input type="password" name="pass" id="pass" placeholder="Think well" required>
+                    </div>
+                    
+                    <br>
+        
+                    <div>
+                        <label>Ikä (1-100)</label>
+        
+                        <input type="number" min="1" max="100"  placeholder=":)"
+                        pattern="[1-100]">
+                    </div>
+                    
+                    <br>
+        
+                    <div>
+                     <label for="email">Sähköposti</label>
+                     <input type="email" placeholder="think_well@hmail.com">
+                    </div>
+                    
+                    <br>
+                    
+                    <div >
+                        <label for="Mies">Mies</label>
+                        <input type="radio" id= "Mies" name="titulo" value="Mies">
+        
+                        <label for="Nainen">Nainen</label>
+                        <input type="radio" id="Nainen" name="titulo" value="Nainen">
+        
+                        <label for="Any">Unknown</label>
+                        <input type="radio" id="any" name="titulo" value="any">
+                    </div>
+                    <div>
+                        <label for="payment">Donate:</label>
+                        <select name="payment" id="payment">
+                            <option value="mastercard">American express</option>
+                            <option value="visa">Visa</option>
+                            <option value="mastercard">Mastercard</option>
+                        </select>
+        
+                    </div>
+                    
+                    <br>
+                    <div>
+                        <label for="subscribe">subscribe</label>
+                        <input type="checkbox">
+                    </div>
+        
+                    <textarea style="width: 80%"
+                    name="Message" id="Message" cols="30" rows="10" placeholder="120 merkien raja" maxlength="120"></textarea>
+
+                    <div>
+                        <input type="reset">
+                        <input type="submit">
+                    </div>
+        
+        
+                </form>
+            </div>
+
+        </aside>
+
+        <div class="clearfix"></div>
+
+        <footer id="#FTR">
+            David Villanueva Web 2022
+        </footer>
+
+
+    </div>
+    
+</body>
+</html>
