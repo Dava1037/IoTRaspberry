@@ -334,12 +334,12 @@ try:
   conn.close()
   
   
-  ## 3. DHT11
+## 3. DHT11
   
-  ## 26.9
-  We had an basic introduce to HTML, talking about the anatomy of elements for example.
+## 26.9
+We had an basic introduce to HTML, talking about the anatomy of elements for example.
   
-  ## 3. DHT11
+## 3. DHT11
 
 ## 29.9 
 Today we started php first creating the website with html but the file is in .php.
