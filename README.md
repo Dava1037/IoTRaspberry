@@ -346,4 +346,7 @@ Today we started php first creating the website with html but the file is in .ph
 ## 30.9
 Time to learn how to make forms on HTML.
 
-## 
+## 10.10
+Here is the way how to connect with the localHost
+
+First to loggin t
