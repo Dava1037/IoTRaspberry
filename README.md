@@ -1,5 +1,4 @@
 # IoTRaspberry
-### IoT Internet of Things
 ### 12.9.2022 Suunnitelma
 ### Projekti on tulossa
 ![alt text](https://user-images.githubusercontent.com/113332647/189599208-ddef9db7-ffe7-4479-b46c-4af63731b899.jpg)
@@ -346,3 +345,5 @@ Today we started php first creating the website with html but the file is in .ph
 
 ## 30.9
 Time to learn how to make forms on HTML.
+
+## 
