@@ -338,8 +338,6 @@ We created a database with some data that we got from a sensor
   
 ## 26.9
 We had an basic introduce to HTML, talking about the anatomy of elements for example.
-  
-## 3. DHT11
 
 ## 29.9 
 Today we started php first creating the website with html but the file is in .php.
@@ -350,4 +348,27 @@ Time to learn how to make forms on HTML.
 ## 10.10
 Here is the way how to connect with the localHost
 
-First to loggin t
+## MySql injektio:
+
+<?php
+include 'config.php';
+
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn-> connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$name = $_POST['nimimerkki'];
+$viesti = $_POST['viesti'];
+$stmt = $conn->prepare('INSERT INTO Keskustelu2 (nimi, viesti) VALUES (?, ?)');       //you have to write ? instead of the 
+$stmt->bind_param('ss', $name, $viesti);
+
+$stmt->execute();
+
+$conn->close();
+
+header("Location: form.php");
+die();
+?>
