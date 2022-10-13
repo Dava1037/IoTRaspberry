@@ -292,14 +292,14 @@ entry.pack()
 
 ## 22.9 Testit
 
-## 1. a) Tietokanta on DAVID_LIIKE, LAHTI, LEO_LIIKE, LIIKE, infomration_schema, mysql, performance_schema)
+### 1. a) Tietokanta on DAVID_LIIKE, LAHTI, LEO_LIIKE, LIIKE, infomration_schema, mysql, performance_schema)
    
    sudo maridb-> show database;
    
    b) you have to comment
    sudo mariadb-> show tables -> select from* [table name] ->describe [table name]
 
-## 2.
+### 2.
 
 import time
 import datetime
@@ -334,6 +334,7 @@ try:
   
   
 ## 3. DHT11
+We created a database with some data that we got from a sensor
   
 ## 26.9
 We had an basic introduce to HTML, talking about the anatomy of elements for example.
