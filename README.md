@@ -31,7 +31,7 @@
 
     And then show it: SELECT*FROM DAVID_Liike
 
-### 16.9
+### 16.9 Arduino
     We connected the arduino uno to the raspberry and try to make them work together.
     With this code line you can make them connect after installing the arduino in the Raspberry. This is in python: 
 
@@ -60,39 +60,39 @@
     delay(100);
     }
 
-## 19.9
+## 19.9 This is how the MARIADB works
 
-![19 9](https://user-images.githubusercontent.com/113332647/190959801-6cb33bf7-d398-4918-b0a8-f9078bc98aa8.jpg)
-(Python)
-import time
+    ![19 9](https://user-images.githubusercontent.com/113332647/190959801-6cb33bf7-d398-4918-b0a8-f9078bc98aa8.jpg)
+    (Python)
+    import time
 
-while True:
-  try:
-      time.sleep(3)
-      print("Testi")
-  except:
-      print("Ei toimi")
+    while True:
+      try:
+          time.sleep(3)
+          print("Testi")
+      except:
+          print("Ei toimi")
 
 ### Edit the database made in MySQL from python code
 
-import time
-import mariadb
+    import time
+    import mariadb
 
-try:
-    while True:
-        time.sleep
-        cur.execute("INSERT INTO ESIMERKKI(arvo) values (3)")
-        conn.comit()
-        print("Koodi toimi")
-        
-except:
-    print("ei toimi")
-    
-conn.close()
+    try:
+        while True:
+            time.sleep
+            cur.execute("INSERT INTO ESIMERKKI(arvo) values (3)")
+            conn.comit()
+            print("Koodi toimi")
+
+    except:
+        print("ei toimi")
+
+    conn.close()
 
 
-cur.execute(f"INSERT INTO liike_tbl(arvo,aika) VALUES (?, ?)", (result, datetime.datetime.now()))
-        conn.commit()
+    cur.execute(f"INSERT INTO liike_tbl(arvo,aika) VALUES (?, ?)", (result, datetime.datetime.now()))
+            conn.commit()
 
 ## 20.9
 
