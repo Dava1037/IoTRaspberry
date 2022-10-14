@@ -1,8 +1,8 @@
 # IoTRaspberry
 ### 12.9.2022 Suunnitelma
 ### Projekti on tulossa
-    ![alt text](https://user-images.githubusercontent.com/113332647/189599208-ddef9db7-ffe7-4479-b46c-4af63731b899.jpg)
-    ![alt text](https://user-images.githubusercontent.com/113332647/189601623-9b14cc20-2b0e-4689-a565-15080d1b61d0.png) 
+![alt text](https://user-images.githubusercontent.com/113332647/189599208-ddef9db7-ffe7-4479-b46c-4af63731b899.jpg)
+![alt text](https://user-images.githubusercontent.com/113332647/189601623-9b14cc20-2b0e-4689-a565-15080d1b61d0.png) 
 
 # Projektissa (Roope, Leo, David)
     13.9 'We started the installation of the raspberry but we are stuck right now on the Testing of the server'
@@ -10,8 +10,8 @@
 
 
 ### How to connect a Motion Sensor to raspberry?
-    There is a proper way to connect a motion sensor to the raspberry, you have to carefully check. We are learning how to do a database on MySQL:
-    ![image](https://user-images.githubusercontent.com/113332647/190372655-f6af9dcf-3fec-49df-be42-9ba9d3713de8.png)
+There is a proper way to connect a motion sensor to the raspberry, you have to carefully check. We are learning how to do a database on MySQL:
+![image](https://user-images.githubusercontent.com/113332647/190372655-f6af9dcf-3fec-49df-be42-9ba9d3713de8.png)
 
 ### HOW TO CREATE DATABASES IN MySQL language 
 
@@ -62,7 +62,7 @@
 
 ## 19.9 This is how the MARIADB works
 
-    ![19 9](https://user-images.githubusercontent.com/113332647/190959801-6cb33bf7-d398-4918-b0a8-f9078bc98aa8.jpg)
+![19 9](https://user-images.githubusercontent.com/113332647/190959801-6cb33bf7-d398-4918-b0a8-f9078bc98aa8.jpg)
     (Python)
     import time
 
@@ -97,98 +97,95 @@
 ## 20.9
 
 ### Selvittäkää mitä tarkoitavat:
-EEPROM: EEPROM tai E²PROM (engl. Electronically Erasable Programmable Read-Only Memory) on haihtumatonta puolijohdemuistia, joka voidaan uudelleenkirjoittaa n. 10 000–100 000 kertaa. EEPROM-muistia käytetään pääasiassa asetustietojen tallentamiseen mikroprosessorin tai mikrokontrollerin sisältävissä laitteissa.
+    EEPROM: EEPROM tai E²PROM (engl. Electronically Erasable Programmable Read-Only Memory) on haihtumatonta puolijohdemuistia, joka voidaan     uudelleenkirjoittaa n. 10 000–100 000 kertaa. EEPROM-muistia käytetään pääasiassa asetustietojen tallentamiseen mikroprosessorin tai mikrokontrollerin sisältävissä laitteissa.
 
-UART: Se on lyhenne sanoista: Universal asynchronus reciever and transmission, tarkoittaa sarjaliikenne protokollaa, joka tapahtuu kahdella linjalla tai digitaalisella nastalla, jotka ovat RX (nasta0) ja TX nasta1).
+    UART: Se on lyhenne sanoista: Universal asynchronus reciever and transmission, tarkoittaa sarjaliikenne protokollaa, joka tapahtuu kahdella linjalla tai digitaalisella nastalla, jotka ovat RX (nasta0) ja TX nasta1).
 
-Arduino sisältää USB-sarjamuuntimen, joka avulla mikro-ohjain alijärjestelmä voi olla suoran yhteydessä tietokoneeseen (esim raspberry PI:hin)
+    Arduino sisältää USB-sarjamuuntimen, joka avulla mikro-ohjain alijärjestelmä voi olla suoran yhteydessä tietokoneeseen (esim raspberry PI:hin)
 
--I2C: Sarjaliikenne protokolla, jota käytetään yleisesti anturipohjaisissa projekteissa. I2C mahdollistaa selkeän tiedonsiirtoreitin ydinpiirin ja ohjainpiirin välillä.
+    -I2C: Sarjaliikenne protokolla, jota käytetään yleisesti anturipohjaisissa projekteissa. I2C mahdollistaa selkeän tiedonsiirtoreitin ydinpiirin ja ohjainpiirin välillä.
 
--SPI: Serial peripheral interface. Tätä yleisesti käytetään, kun halutaan kahden mikro-ohjaimen keskustelevan keskenään
-
-Mitä eroa I2C ja SIP:llä: 
-
+    -SPI: Serial peripheral interface. Tätä yleisesti käytetään, kun halutaan kahden mikro-ohjaimen keskustelevan keskenään.
 
 
 ## Common comands
 
-apt-get update: Synchronizes the list of packages on your system to the list in the repositories. Use it before installing new packages to make sure you are installing the latest version.
+    apt-get update: Synchronizes the list of packages on your system to the list in the repositories. Use it before installing new packages to make sure you are installing the latest version.
 
-clear: Clears previously run commands and text from the terminal screen.
+    clear: Clears previously run commands and text from the terminal screen.
 
-date: Prints the current date.
+    date: Prints the current date.
 
-find/ -name esimerkki.txt: Searches the whole system for the file example.txt and outputs a list of all directories that contain the file.
+    find/ -name esimerkki.txt: Searches the whole system for the file example.txt and outputs a list of all directories that contain the file.
 
-nano example.txt: Opens the file example.txt in the Linux text editor Nano.
+    nano example.txt: Opens the file example.txt in the Linux text editor Nano.
 
-poweroff: To shutdown immediately.
+    poweroff: To shutdown immediately.
 
-raspi-config: Opens the configuration settings menu.
+    raspi-config: Opens the configuration settings menu.
 
-reboot: To reboot immediately.
+    reboot: To reboot immediately.
 
-shutdown -h 01:22: To shutdown at 1:22 AM.
+    shutdown -h 01:22: To shutdown at 1:22 AM.
 
-startx: Opens the GUI (Graphical User Interface)
-
-
-cat esimerkki.txt: Displays the contents of the file example.txt.
-
-cd/abc/xyz: Changes the current directory to the /abc/xyz directory
-
-|s -|
-
-mkdir esimerkki:_polku: Creates a new directory named example_directory inside the current directory
-
-mv XXX: Moves the file or directory named XXX to a specified location. For example, mv
-
-rm esimekki: Deletes the file example.txt
-
-scp user @10.0.0.32:/sine/path/tiedosto.txt: Copies a file over SSH. Can be used to download a file from a PC to the Raspberry Pi. user@10.0.0.32 is the username and local IP address of the PC, and /some/path/file.txt is the path and file name of the file on the PC.
-
-touch example.txt: Creates a new, empty file named example.txt in the current directory.
+    startx: Opens the GUI (Graphical User Interface)
 
 
-ifconfig: To check the status of the wireless connection you are using (to see if wlan0 has acquired an IP address).
+    cat esimerkki.txt: Displays the contents of the file example.txt.
 
-iwconfig: To check which network the wireless adapter is using.
+    cd/abc/xyz: Changes the current directory to the /abc/xyz directory
 
-iwlist wlan0 grep ESSID: Use grep along with the name of a field to list only the fields you need (for example to just list the ESSIDs).
+    |s -|
 
-nmap: Scans your network and lists connected devices, port number, protocol, state (open or closed) operating system, MAC addresses, and other information.
+    mkdir esimerkki:_polku: Creates a new directory named example_directory inside the current directory
 
-ping: Tests connectivity between two devices connected on a network. For example, ping 10.0.0.32 will send a packet to the device at IP 10.0.0.32 and wait for a response. It also works with website addresses
+    mv XXX: Moves the file or directory named XXX to a specified location. For example, mv
 
-wget http://www.website.com/example.txt: Downloads the file example.txt from the web and saves it to the current directory.
+    rm esimekki: Deletes the file example.txt
+
+    scp user @10.0.0.32:/sine/path/tiedosto.txt: Copies a file over SSH. Can be used to download a file from a PC to the Raspberry Pi. user@10.0.0.32 is the username and local IP address of the PC, and /some/path/file.txt is the path and file name of the file on the PC.
+
+    touch example.txt: Creates a new, empty file named example.txt in the current directory.
 
 
-cat /proc /meminfo: Shows details about your memory.
+    ifconfig: To check the status of the wireless connection you are using (to see if wlan0 has acquired an IP address).
 
-cat /proc /partions: Shows the size and number of partitions on your SD card or hard drive.
+    iwconfig: To check which network the wireless adapter is using.
 
-cat/proc/version: Shows you which version of the Raspberry Pi you are using
+    iwlist wlan0 grep ESSID: Use grep along with the name of a field to list only the fields you need (for example to just list the ESSIDs).
 
-df -h: Shows information about the available disk space.
+    nmap: Scans your network and lists connected devices, port number, protocol, state (open or closed) operating system, MAC addresses, and other information.
 
-df /: Shows how much free disk space is available
+    ping: Tests connectivity between two devices connected on a network. For example, ping 10.0.0.32 will send a packet to the device at IP 10.0.0.32 and wait for a response. It also works with website addresses
 
-dpkg--get-selections| grep XXX: Shows all of the installed packages that are related to XXX
+    wget http://www.website.com/example.txt: Downloads the file example.txt from the web and saves it to the current directory.
 
-dpkg--get-selections: Shows all of your installed packages
 
-free: Shows how much free memory is available.
+    cat /proc /meminfo: Shows details about your memory.
 
-hostname -I: Shows the IP address of your Raspberry Pi.
+    cat /proc /partions: Shows the size and number of partitions on your SD card or hard drive.
 
-lsusb: Lists USB hardware connected to your Raspberry Pi.
+    cat/proc/version: Shows you which version of the Raspberry Pi you are using
 
-UP key: Pressing the UP key will print the last command entered into the command prompt. This is a quick way to repeat previous commands or make corrections to commands.
+    df -h: Shows information about the available disk space.
 
-vcgenmd measure_temp:  Shows the temperature of the CPU
+    df /: Shows how much free disk space is available
 
-vcgencmd get_mem am && vcgencmd get_mem gpu: Shows the memory split between the CPU and GPU.
+    dpkg--get-selections| grep XXX: Shows all of the installed packages that are related to XXX
+
+    dpkg--get-selections: Shows all of your installed packages
+
+    free: Shows how much free memory is available.
+
+    hostname -I: Shows the IP address of your Raspberry Pi.
+
+    lsusb: Lists USB hardware connected to your Raspberry Pi.
+
+    UP key: Pressing the UP key will print the last command entered into the command prompt. This is a quick way to repeat previous commands or make corrections to commands.
+
+    vcgenmd measure_temp:  Shows the temperature of the CPU
+
+    vcgencmd get_mem am && vcgencmd get_mem gpu: Shows the memory split between the CPU and GPU.
 
 
 
