@@ -94,9 +94,8 @@ There is a proper way to connect a motion sensor to the raspberry, you have to c
     cur.execute(f"INSERT INTO liike_tbl(arvo,aika) VALUES (?, ?)", (result, datetime.datetime.now()))
             conn.commit()
 
-## 20.9
-
-### Selvittäkää mitä tarkoitavat:
+## 20.9 TEHTÄVÄ: 
+Selvittäkää mitä tarkoitavat:
     EEPROM: EEPROM tai E²PROM (engl. Electronically Erasable Programmable Read-Only Memory) on haihtumatonta puolijohdemuistia, joka voidaan     uudelleenkirjoittaa n. 10 000–100 000 kertaa. EEPROM-muistia käytetään pääasiassa asetustietojen tallentamiseen mikroprosessorin tai mikrokontrollerin sisältävissä laitteissa.
 
     UART: Se on lyhenne sanoista: Universal asynchronus reciever and transmission, tarkoittaa sarjaliikenne protokollaa, joka tapahtuu kahdella linjalla tai digitaalisella nastalla, jotka ovat RX (nasta0) ja TX nasta1).
@@ -108,7 +107,7 @@ There is a proper way to connect a motion sensor to the raspberry, you have to c
     -SPI: Serial peripheral interface. Tätä yleisesti käytetään, kun halutaan kahden mikro-ohjaimen keskustelevan keskenään.
 
 
-## Common comands
+## Common comands RASPBERRY
 
     apt-get update: Synchronizes the list of packages on your system to the list in the repositories. Use it before installing new packages to make sure you are installing the latest version.
 
@@ -199,58 +198,58 @@ vcgencmd measure_temp       //GPU temperature
 
 ## Practice on Terminal
 
-cd /home/       //opens the home database
-cd /home/rld-admin/Desktop      //
-touch Test        //Creates the file in the desktop
-cp Test Test2       //
-rm Test2        //Removes the file
-mv Test Test2       //Moves the file to specific place
-ls        //
-ls -larth       //shows information of the file like storage and last day/time that was edited
+    cd /home/       //opens the home database
+    cd /home/rld-admin/Desktop      //
+    touch Test        //Creates the file in the desktop
+    cp Test Test2       //
+    rm Test2        //Removes the file
+    mv Test Test2       //Moves the file to specific place
+    ls        //
+    ls -larth       //shows information of the file like storage and last day/time that was edited
 
-## 21.9
+## 21.9 Practice on python
 
-import tkinter
-root = tk.Tk()
+    import tkinter
+    root = tk.Tk()
 
-label = tk.Label(text="Heippa maailma")
-label.pack()
+    label = tk.Label(text="Heippa maailma")
+    label.pack()
 
-entry = tk.Entry()
-entry.pack()
+    entry = tk.Entry()
+    entry.pack()
 
-                      //radiobuttons
+                          //radiobuttons
 
-radioBtn = tk.Radiobutton(text="A", value= "A")
-radioBtn.pack()                                       //You have to right each time 'radioBtn.pack()' if you want to make the button.
+    radioBtn = tk.Radiobutton(text="A", value= "A")
+    radioBtn.pack()                                       //You have to right each time 'radioBtn.pack()' if you want to make the button.
 
-radioBtn = tk.Radiobutton(text="B", value= "B")
-radioBtn.pack()                                       //
+    radioBtn = tk.Radiobutton(text="B", value= "B")
+    radioBtn.pack()                                       //
 
-radioBtn = tk.Radiobutton(text="C", value= "C")
-radioBtn.pack()                                       //
-
-
-root.mainloop()
-
-### to create a button: 
-
-btn = tk.Button()
-        text="Nappi",                                     //to instert the text of the button
-        width=10,
-        height=5,
-        gb="blue",
-        fg="black",
-//you can change the color of the background with 'bg=red' or the text color with 'fg=white', for example.
+    radioBtn = tk.Radiobutton(text="C", value= "C")
+    radioBtn.pack()                                       //
 
 
-///To give an instruction to the button for example you define the instructions at the beginning with the root.configure soo when you press the button is change the color for example.
-        root.configure(
-        bg="black"
-        )                             //now it changes to black everytime that you use the button
-        
- def radBtn1():
-     root.configure(bg="black")
+    root.mainloop()
+
+### To create a button (Python): 
+
+    btn = tk.Button()
+            text="Nappi",                                     //to instert the text of the button
+            width=10,
+            height=5,
+            gb="blue",
+            fg="black",
+    //you can change the color of the background with 'bg=red' or the text color with 'fg=white', for example.
+
+
+    ///To give an instruction to the button for example you define the instructions at the beginning with the root.configure soo when you press the button is change the color for example.
+            root.configure(
+            bg="black"
+            )                             //now it changes to black everytime that you use the button
+
+     def radBtn1():
+         root.configure(bg="black")
 ## Miten label toimi
 
 message =tk.Label(
