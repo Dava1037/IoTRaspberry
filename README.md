@@ -186,16 +186,6 @@ There is a proper way to connect a motion sensor to the raspberry, you have to c
 
     vcgencmd get_mem am && vcgencmd get_mem gpu: Shows the memory split between the CPU and GPU.
 
-
-
-Selvittäkää miten tarkistetaan
--Raspberryn lämpötila: cat /sys/class/thermal/thermal_zone0/temp
-vcgencmd measure_temp       //GPU temperature
-
--kuinka paljon vapaata tilaa on jäljellä
--miten vaihdetaan polusta toiseen
-
-
 ## Practice on Terminal
 
     cd /home/       //opens the home database
@@ -268,7 +258,7 @@ btn = tk.Button(
     bg="blue",
     fg="yellow"
     )
-### Window  
+### Window 
 import tkinter as tk
 window = tk.Tk()
 lb = tk.Label(text="Name")
@@ -282,83 +272,178 @@ entry.pack()
 
 ## 22.9 Testit
 
-### 1. a) Tietokanta on DAVID_LIIKE, LAHTI, LEO_LIIKE, LIIKE, infomration_schema, mysql, performance_schema)
-   
-   sudo maridb-> show database;
-   
-   b) you have to comment
-   sudo mariadb-> show tables -> select from* [table name] ->describe [table name]
+    1. a) Tietokanta on DAVID_LIIKE, LAHTI, LEO_LIIKE, LIIKE, infomration_schema, mysql, performance_schema)
 
-### 2.
+       sudo maridb-> show database;
 
-import time
-import datetime
-import maridb
-import RPi.GPIO as GPIO
+       b) you have to comment
+       sudo mariadb-> show tables -> select from* [table name] ->describe [table name]
 
-InputPin = 4      
+    2.
 
-GPIO.setmode(GPIO.BCM)
-GPIO.SETUP(4, GPIO.IN)
+    import time
+    import datetime
+    import maridb
+    import RPi.GPIO as GPIO
 
+    InputPin = 4      
 
-conn = mariadb.connect(user="root", password="kissa123", host="localhost", database="LIIKE")
-cur = conn.cursor()
+    GPIO.setmode(GPIO.BCM)
+    GPIO.SETUP(4, GPIO.IN)
 
 
-Annettiin muututuja while True loopin sisälle arvo = GPIO.input(4) Lisättiin sqlStringiin etteen f ja muutettiin "5" kovakoodattu arvon tilalle {arvo}        
-try:
-  while True:
-      arvo = GPIO.input(InputPin)
+    conn = mariadb.connect(user="root", password="kissa123", host="localhost", database="LIIKE")
+    cur = conn.cursor()
 
-      sqlStr = (f"INSERT INTO liike_tbl(arvo, aika) VALUES ({arvo}, now()")
 
-      time.sleep(5)
-      cur.execute(sqlStr)
-      conn.commit()
-  except:
-    print("ei toimi :(")
-    print(arvo)
+    Annettiin muututuja while True loopin sisälle arvo = GPIO.input(4) Lisättiin sqlStringiin etteen f ja muutettiin "5" kovakoodattu arvon tilalle {arvo}        
+    try:
+      while True:
+          arvo = GPIO.input(InputPin)
+
+          sqlStr = (f"INSERT INTO liike_tbl(arvo, aika) VALUES ({arvo}, now()")
+
+          time.sleep(5)
+          cur.execute(sqlStr)
+          conn.commit()
+      except:
+        print("ei toimi :(")
+        print(arvo)
+
+      conn.close()
+  
+  
+    3. DHT11: We created a database with some data that we got from a sensor
+  
+## 26.9 Basic introduction: 
+    We had an basic introduce to HTML, talking about the anatomy of elements for example.
+    THIS IS A FORM I MADE
     
-  conn.close()
-  
-  
-## 3. DHT11
-We created a database with some data that we got from a sensor
-  
-## 26.9
-We had an basic introduce to HTML, talking about the anatomy of elements for example.
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Box info</title>
+    </head>
+    <body>
+        <div style="border: 1px dashed black; width:fit-content; text-align: center ">
+
+            <form action="process.php" style="background-color: yellow " >
+
+
+                <div>
+                    <label for="fname">Nimi:</label>
+                    <input type="text" id="fname" name="fname" placeholder="Etunimi" required>
+
+                </div>
+
+                <br>
+
+                <div>
+                  <label for="bdatee">Päivämäärä</label>
+                  <input type="date">
+                </div>
+
+                <br>
+
+                <div>
+                    <label for="pass">Salasana</label>
+                    <input type="password" name="pass" id="pass" placeholder="Think well" required>
+                </div>
+
+                <br>
+
+                <div>
+                    <label>Ikä (1-100)</label>
+
+                    <input type="number" min="1" max="100"  placeholder=":)"
+                    pattern="[1-100]">
+                </div>
+
+                <br>
+
+                <div>
+                 <label for="email">Sähköposti</label>
+                 <input type="email" placeholder="think_well@hmail.com">
+                </div>
+
+                <br>
+
+                <div >
+                    <label for="Mies">Mies</label>
+                    <input type="radio" id= "Mies" name="titulo" value="Mies">
+
+                    <label for="Nainen">Nainen</label>
+                    <input type="radio" id="Nainen" name="titulo" value="Nainen">
+
+                    <label for="Any">Unknown</label>
+                    <input type="radio" id="any" name="titulo" value="any">
+                </div>
+                <div>
+                    <label for="payment">Donate:</label>
+                    <select name="payment" id="payment">
+                        <option value="mastercard">American express</option>
+                        <option value="visa">Visa</option>
+                        <option value="mastercard">Mastercard</option>
+                    </select>
+
+                </div>
+
+                <br>
+                <div>
+                    <label for="subscribe">subscribe</label>
+                    <input type="checkbox">
+                </div>
+
+                <textarea name="Message" id="Message" cols="30" rows="10" placeholder="120 merkien raja" maxlength="120"></textarea>
+                <div>
+                    <input type="reset">
+                    <input type="submit">
+                </div>
+
+
+            </form>
+        </div>
+    </body>
+    </html>
 
 ## 29.9 
-Today we started php first creating the website with html but the file is in .php.
+    Today we started php first creating the website with html but the file is in .php. (IS IN THE SCHOOL'S LAPTOP)
 
 ## 30.9
-Time to learn how to make forms on HTML.
+    Let's add some more design to the forms.
 
 ## 10.10
-Here is the way how to connect with the localHost
+    Here is the way how to connect with the localHost in the terminal:
+    
+        cd..        //This is the command to open the files 
+        dir         //This is to show the directory and see in which file or folder I can enter
+        
+        C:\Users\eduagudevil\Desktop\PHP>php\php -S localhost:8000          //This opens the localhost and then I go to browser and type localhost:8000 and I am already watching the results. Also is posible to visualize the files that I have fore example if I use localhost:8000/index.php I can run the documents that are in .php
 
 ## MySql injektio:
 
-<?php
-include 'config.php';
+    <?php
+    include 'config.php';
 
-mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
-$conn = new mysqli($servername, $username, $password, $dbname);
+    mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+    $conn = new mysqli($servername, $username, $password, $dbname);
 
-if ($conn-> connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+    if ($conn-> connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
 
-$name = $_POST['nimimerkki'];
-$viesti = $_POST['viesti'];
-$stmt = $conn->prepare('INSERT INTO Keskustelu2 (nimi, viesti) VALUES (?, ?)');       //you have to write ? instead of the 
-$stmt->bind_param('ss', $name, $viesti);
+    $name = $_POST['nimimerkki'];
+    $viesti = $_POST['viesti'];
+    $stmt = $conn->prepare('INSERT INTO Keskustelu2 (nimi, viesti) VALUES (?, ?)');       //you have to write ? instead of the 
+    $stmt->bind_param('ss', $name, $viesti);
 
-$stmt->execute();
+    $stmt->execute();
 
-$conn->close();
+    $conn->close();
 
-header("Location: form.php");
-die();
-?>
+    header("Location: form.php");
+    die();
+    ?>
