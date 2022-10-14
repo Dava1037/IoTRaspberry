@@ -15,50 +15,50 @@
 
 ### HOW TO CREATE DATABASES IN MySQL language 
 
-OPEN THE: sudo mariadb
+    OPEN THE: sudo mariadb
 
-TO CREATE DATABASE: CREATE DATABASE DAVID_Liike;
+    TO CREATE DATABASE: CREATE DATABASE DAVID_Liike;
 
-Use the database already created: USE DAVID_LIIKE
+    Use the database already created: USE DAVID_LIIKE
 
-Create the format: CREATE TABLE DAVID_Liike (id int AUTO_INCREMENT NOT NULL PRIMARY KEY, arvo boolean, aika datetime);
+    Create the format: CREATE TABLE DAVID_Liike (id int AUTO_INCREMENT NOT NULL PRIMARY KEY, arvo boolean, aika datetime);
 
-Then you have to insert the values: INSTERT INTO DAVID_Liike (arvo, aika) VALUES (true, now());
+    Then you have to insert the values: INSTERT INTO DAVID_Liike (arvo, aika) VALUES (true, now());
 
-This shows the table: SELECT*FROM DAVID_Liike
+    This shows the table: SELECT*FROM DAVID_Liike
 
-Everytime that you want to insert some data you have to use this: INSERT INTO DAVID_Liike (arvo, aika) VALUES (false, now());
+    Everytime that you want to insert some data you have to use this: INSERT INTO DAVID_Liike (arvo, aika) VALUES (false, now());
 
-And then show it: SELECT*FROM DAVID_Liike
+    And then show it: SELECT*FROM DAVID_Liike
 
 ### 16.9
-We connected the arduino uno to the raspberry and try to make them work together.
-With this code line you can make them connect after installing the arduino in the Raspberry. This is in python: 
+    We connected the arduino uno to the raspberry and try to make them work together.
+    With this code line you can make them connect after installing the arduino in the Raspberry. This is in python: 
 
-#!/usr/bin/env python3
-import serial
+    #!/usr/bin/env python3
+    import serial
 
-if __name__ == '__main__':
-  ser = serial.Serrial('/dev/ttyACM0', 9600, timeout=1) 
-  ser.reset_input_buffer()
-  
-  while True:
-    if ser.in_waiting > 0:
-      line = ser.readline().decode('utf-8).rstrip()
-      print(line)
-### Also
-On the ardiuno platform we had to open a new sketch and create the order to run the arduino serial:
+    if __name__ == '__main__':
+      ser = serial.Serrial('/dev/ttyACM0', 9600, timeout=1) 
+      ser.reset_input_buffer()
 
-void setup() {
+      while True:
+        if ser.in_waiting > 0:
+          line = ser.readline().decode('utf-8).rstrip()
+          print(line)
 
-Serial.begin(9600);
-}
+    On the ardiuno platform we had to open a new sketch and create the order to run the arduino serial:
 
-//with this you can make it repeat the serial as a loop and we noticed that changing the value in the delay makes it faster or slower when you check the  Sarjamonitori in the Ardiuno program 
-void loop() {
-Serial.println("Arduino");
-delay(100);
-}
+    void setup() {
+
+    Serial.begin(9600);
+    }
+
+    //with this you can make it repeat the serial as a loop and we noticed that changing the value in the delay makes it faster or slower when you check       the  Sarjamonitori in the Ardiuno program 
+    void loop() {
+    Serial.println("Arduino");
+    delay(100);
+    }
 
 ## 19.9
 
