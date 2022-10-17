@@ -1,20 +1,11 @@
+<!---google chart-->
 
-<html>
-        <head>
-        <style>
-          table, th, td{
-            border: 1px solid black;
-          }
-        </style>
-        </head>
-        <body>
-        
         <?php 
 
     $servername = "hyvis.mysql.database.azure.com";
     $username = "db_projekti";
     $password = "Sivyh2022";
-    $dbname = "david_db";
+    $dbname = "liike";
 
     $conn = new mysqli($servername, $username, $password, $dbname);
      if($conn->connect_error)
@@ -22,53 +13,66 @@
     {
         die("Connection failed:" . $conn->connect_error);
     }
-    $sql ="SELECT id, value , date FROM david_tbl";
+    $sql ="SELECT  Arvo , Aika FROM liike order by Aika desc limit 10" ;
     $result =$conn -> query($sql);
 
-    
+   
+   echo "<table><tr><th>Aika</th><th>Arvo</th></tr>";
+   
+    $movement = 0;
+    $noMovement = 0;
 
-    echo "<table><tr><th>Aika</th><th>Arvo</th></tr>";
+    while($row = $result->fetch_assoc()) {
+      echo "<tr><td>".$row["Aika"]."</td><td>".$row["Arvo"]. "</td></tr>";
+      if ($row["Arvo"]==1){
 
-        $movement = 0;
-        $noMovement = 0;
+       $movement++;
 
-        while($row = $result->fetch_assoc()) {
-            echo "<tr><td>".$row["date"]."</td><td>".$row["value"]. "</td></tr>";
-            if ($row["Arvo"]==1){
+      }
+      else {
+      $noMovement++;
+      }
+   }
+   
+  echo "</table>";
 
-             $movement++;
+    $conn-> close();
 
-            }
-            else {
-            $noMovement++;
-            }
-        }    
-    
-    echo "</table>";
+   $chartArray = "['Liikettä',     ".$movement."],
+         
+   ['Ei Liikettä',    ".$noMovement."]";
+ echo $movement;
+ echo $noMovement;
+ 
+ ?>
 
-        $conn-> close();
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
 
-    $chartArray = "['Liikettä',     ".$movement."],
+      function drawChart() {
 
-    ['Ei Liikettä',     ".$noMovement."]";
-    echo $movement;
-    echo $noMovement;
-    ?>
-    
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Form</title>
-    </head>
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Liikettä',     6],
+          ['Ei liikettä',      4]
+         
+        ]);
 
-    <body>
-        <form action="handle.php" method:"post">
-        Nimimerkki: <input type="text" name="name"><br>
-        Viesti: <textarea name="viesti"></textarea>
-        <input type="submit">
-        </form>
-    </body>
+        var options = {
+          title: 'Liikettä tai Ei liikettä'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="piechart" style="width: 900px; height: 500px;"></div>
+  </body>
 </html>

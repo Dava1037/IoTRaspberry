@@ -1,24 +1,22 @@
 <?php
-include 'config.php'
+include 'config.php';
 
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 $conn = new mysqli($servername, $username, $password, $dbname);
-if ($conn-> connect_error) 
 
-{
+if ($conn-> connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$name = $_POST['name'];
+$name = $_POST['nimimerkki'];
 $viesti = $_POST['viesti'];
-$sql = *INSERT INTO Keskustelu2 (nimim, viesti) VALUES ('".$name."','".$viesti."');
-if ($conn->query($sql) === TRUE){
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $sql. "<br>" . $conn->error;
-    die();
-}
+$stmt = $conn->prepare('INSERT INTO Keskustelu2 (nimi, viesti) VALUES (?, ?)');
+$stmt->bind_param('ss', $name, $viesti);
+
+$stmt->execute();
 
 $conn->close();
-header("Location: index.php");
+
+header("Location: form.php");
 die();
 ?>
